@@ -1,0 +1,649 @@
+{
+  "config": {
+    "n_models": 5,
+    "n_epochs": 300,
+    "bottleneck_dim": 8,
+    "seed": 42,
+    "n_features": 50,
+    "n_supernovae": 33
+  },
+  "feature_names": [
+    "best_band_nobs",
+    "best_band_range",
+    "best_band_std",
+    "bright_fraction",
+    "brightness_asymmetry",
+    "cadence_mean",
+    "cadence_median",
+    "cadence_std",
+    "error_mean",
+    "error_std",
+    "frac_beyond_1sigma",
+    "frac_beyond_2sigma",
+    "frac_beyond_3sigma",
+    "inter_epoch_range",
+    "inter_epoch_std",
+    "mag_cv",
+    "mag_iqr",
+    "mag_kurtosis",
+    "mag_mad",
+    "mag_max",
+    "mag_mean",
+    "mag_median",
+    "mag_min",
+    "mag_p10",
+    "mag_p90",
+    "mag_range",
+    "mag_range_per_epoch",
+    "mag_skewness",
+    "mag_std",
+    "max_gap",
+    "mean_intra_epoch_std",
+    "n_bands",
+    "n_epochs",
+    "n_observations",
+    "n_outbursts",
+    "outburst_rate",
+    "rate_max",
+    "rate_mean",
+    "rate_median",
+    "rate_std",
+    "sf_long",
+    "sf_med",
+    "sf_ratio_long_short",
+    "sf_short",
+    "snr_proxy",
+    "time_span",
+    "trend_residual_mad",
+    "trend_residual_std",
+    "trend_slope",
+    "variability_per_day"
+  ],
+  "watchlist": [
+    {
+      "rank": 1,
+      "name": "SN2009kn",
+      "type": "IIn",
+      "anomaly_score": 0.37453025579452515,
+      "score_std": 0.03666885569691658,
+      "individual_scores": [
+        0.3590358793735504,
+        0.3271271884441376,
+        0.38889244198799133,
+        0.3713463246822357,
+        0.42624953389167786
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "SN2015bh",
+      "type": "IIn",
+      "anomaly_score": 0.32186371088027954,
+      "score_std": 0.050566453486680984,
+      "individual_scores": [
+        0.3763156831264496,
+        0.30412009358406067,
+        0.25880908966064453,
+        0.29880791902542114,
+        0.371265709400177
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "SN2012fr",
+      "type": "Ia",
+      "anomaly_score": 0.3094940185546875,
+      "score_std": 0.03778607398271561,
+      "individual_scores": [
+        0.27168169617652893,
+        0.36659905314445496,
+        0.2982793152332306,
+        0.3262155055999756,
+        0.28469452261924744
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "SN2009ip",
+      "type": "IIn",
+      "anomaly_score": 0.30343079566955566,
+      "score_std": 0.07275852560997009,
+      "individual_scores": [
+        0.31854048371315,
+        0.18099074065685272,
+        0.30525851249694824,
+        0.34227892756462097,
+        0.37008529901504517
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "SN2005ip",
+      "type": "IIn",
+      "anomaly_score": 0.2842898964881897,
+      "score_std": 0.04487442970275879,
+      "individual_scores": [
+        0.313751757144928,
+        0.29623401165008545,
+        0.21217116713523865,
+        0.2734600007534027,
+        0.3258326053619385
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "SN2018oh",
+      "type": "Ia",
+      "anomaly_score": 0.2712826132774353,
+      "score_std": 0.022493893280625343,
+      "individual_scores": [
+        0.2785015404224396,
+        0.2630791962146759,
+        0.24875593185424805,
+        0.2593669593334198,
+        0.3067094087600708
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "SN1988Z",
+      "type": "II",
+      "anomaly_score": 0.269481360912323,
+      "score_std": 0.09224321693181992,
+      "individual_scores": [
+        0.21706810593605042,
+        0.2910134792327881,
+        0.19928359985351562,
+        0.4219724237918854,
+        0.2180691510438919
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "SN2007af",
+      "type": "Ia",
+      "anomaly_score": 0.26725369691848755,
+      "score_std": 0.04488913342356682,
+      "individual_scores": [
+        0.3402635455131531,
+        0.24748064577579498,
+        0.27999255061149597,
+        0.23442953824996948,
+        0.23410218954086304
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "SN2005gl",
+      "type": "IIn",
+      "anomaly_score": 0.264380544424057,
+      "score_std": 0.09559907019138336,
+      "individual_scores": [
+        0.17216350138187408,
+        0.1850939691066742,
+        0.2592622935771942,
+        0.40811052918434143,
+        0.2972724437713623
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "SN2012aw",
+      "type": "II",
+      "anomaly_score": 0.26400941610336304,
+      "score_std": 0.021253075450658798,
+      "individual_scores": [
+        0.25766581296920776,
+        0.25227290391921997,
+        0.2823871970176697,
+        0.2384539395570755,
+        0.28926730155944824
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "SN2010jl",
+      "type": "IIn",
+      "anomaly_score": 0.2621117830276489,
+      "score_std": 0.0196795966476202,
+      "individual_scores": [
+        0.24564267694950104,
+        0.25322967767715454,
+        0.2829394042491913,
+        0.28380298614501953,
+        0.244944229722023
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "SN2014J",
+      "type": "Ia",
+      "anomaly_score": 0.2591363191604614,
+      "score_std": 0.058609142899513245,
+      "individual_scores": [
+        0.32824790477752686,
+        0.2779923379421234,
+        0.2815140187740326,
+        0.17218820750713348,
+        0.2357390820980072
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "SN2010mc",
+      "type": "IIn",
+      "anomaly_score": 0.24744077026844025,
+      "score_std": 0.045253779739141464,
+      "individual_scores": [
+        0.25843989849090576,
+        0.20389264822006226,
+        0.3159937262535095,
+        0.20910964906215668,
+        0.24976785480976105
+      ]
+    },
+    {
+      "rank": 14,
+      "name": "SN2006jd",
+      "type": "IIn",
+      "anomaly_score": 0.24066559970378876,
+      "score_std": 0.055658698081970215,
+      "individual_scores": [
+        0.2371293604373932,
+        0.19099918007850647,
+        0.18128035962581635,
+        0.3018423318862915,
+        0.2920767366886139
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "SN2011ht",
+      "type": "IIn",
+      "anomaly_score": 0.2380238026380539,
+      "score_std": 0.14496144652366638,
+      "individual_scores": [
+        0.1626264452934265,
+        0.3080188035964966,
+        0.46104633808135986,
+        0.12406983226537704,
+        0.13435764610767365
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "SN1997cy",
+      "type": "II",
+      "anomaly_score": 0.22090038657188416,
+      "score_std": 0.018390676006674767,
+      "individual_scores": [
+        0.20923414826393127,
+        0.1968381106853485,
+        0.24103565514087677,
+        0.22125500440597534,
+        0.23613911867141724
+      ]
+    },
+    {
+      "rank": 17,
+      "name": "SN2011fe",
+      "type": "Ia",
+      "anomaly_score": 0.214162677526474,
+      "score_std": 0.056704867631196976,
+      "individual_scores": [
+        0.2906931936740875,
+        0.2423718422651291,
+        0.21096765995025635,
+        0.14055147767066956,
+        0.18622928857803345
+      ]
+    },
+    {
+      "rank": 18,
+      "name": "SN2013ej",
+      "type": "II",
+      "anomaly_score": 0.20839767158031464,
+      "score_std": 0.04075527563691139,
+      "individual_scores": [
+        0.23820465803146362,
+        0.1929142028093338,
+        0.2638847529888153,
+        0.17317551374435425,
+        0.1738092452287674
+      ]
+    },
+    {
+      "rank": 19,
+      "name": "SN2004et",
+      "type": "II",
+      "anomaly_score": 0.20802047848701477,
+      "score_std": 0.048668015748262405,
+      "individual_scores": [
+        0.1693459153175354,
+        0.2088058441877365,
+        0.2609817385673523,
+        0.1501878798007965,
+        0.25078096985816956
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "SN1994D",
+      "type": "Ia",
+      "anomaly_score": 0.2002902328968048,
+      "score_std": 0.05962255969643593,
+      "individual_scores": [
+        0.1895507574081421,
+        0.17581060528755188,
+        0.2991141676902771,
+        0.139197438955307,
+        0.1977781355381012
+      ]
+    },
+    {
+      "rank": 21,
+      "name": "SN2006X",
+      "type": "Ia",
+      "anomaly_score": 0.16861119866371155,
+      "score_std": 0.03807869181036949,
+      "individual_scores": [
+        0.21557092666625977,
+        0.1987745612859726,
+        0.1577121466398239,
+        0.12183716148138046,
+        0.1491612046957016
+      ]
+    },
+    {
+      "rank": 22,
+      "name": "SN2005cf",
+      "type": "Ia",
+      "anomaly_score": 0.16117319464683533,
+      "score_std": 0.0244949609041214,
+      "individual_scores": [
+        0.16613741219043732,
+        0.18516245484352112,
+        0.17430074512958527,
+        0.15939588844776154,
+        0.12086943536996841
+      ]
+    },
+    {
+      "rank": 23,
+      "name": "SN1987A",
+      "type": "II",
+      "anomaly_score": 0.15517224371433258,
+      "score_std": 0.031102390959858894,
+      "individual_scores": [
+        0.197820782661438,
+        0.15577171742916107,
+        0.16553622484207153,
+        0.11246590316295624,
+        0.1442665457725525
+      ]
+    },
+    {
+      "rank": 24,
+      "name": "SN2001el",
+      "type": "Ia",
+      "anomaly_score": 0.15057486295700073,
+      "score_std": 0.02478809840977192,
+      "individual_scores": [
+        0.13099902868270874,
+        0.16279669106006622,
+        0.18838106095790863,
+        0.13936354219913483,
+        0.13133400678634644
+      ]
+    },
+    {
+      "rank": 25,
+      "name": "SN2006gy",
+      "type": "II",
+      "anomaly_score": 0.14148898422718048,
+      "score_std": 0.021334417164325714,
+      "individual_scores": [
+        0.121577188372612,
+        0.1301567256450653,
+        0.17125040292739868,
+        0.1279318928718567,
+        0.15652869641780853
+      ]
+    },
+    {
+      "rank": 26,
+      "name": "SN2003du",
+      "type": "Ia",
+      "anomaly_score": 0.14035239815711975,
+      "score_std": 0.03589773550629616,
+      "individual_scores": [
+        0.16267341375350952,
+        0.1210818886756897,
+        0.19054481387138367,
+        0.1005338728427887,
+        0.1269279569387436
+      ]
+    },
+    {
+      "rank": 27,
+      "name": "SN1998S",
+      "type": "IIn",
+      "anomaly_score": 0.13325345516204834,
+      "score_std": 0.03402458503842354,
+      "individual_scores": [
+        0.09589562565088272,
+        0.18383212387561798,
+        0.11404704302549362,
+        0.1482894867658615,
+        0.12420294433832169
+      ]
+    },
+    {
+      "rank": 28,
+      "name": "SN2012A",
+      "type": "II",
+      "anomaly_score": 0.12922276556491852,
+      "score_std": 0.016972092911601067,
+      "individual_scores": [
+        0.12251990288496017,
+        0.11594681441783905,
+        0.1161213293671608,
+        0.13546167314052582,
+        0.15606409311294556
+      ]
+    },
+    {
+      "rank": 29,
+      "name": "SN2017eaw",
+      "type": "II",
+      "anomaly_score": 0.12412603199481964,
+      "score_std": 0.033858586102724075,
+      "individual_scores": [
+        0.11822356283664703,
+        0.18140961229801178,
+        0.12292497605085373,
+        0.10114645212888718,
+        0.09692558646202087
+      ]
+    },
+    {
+      "rank": 30,
+      "name": "SN1999em",
+      "type": "II",
+      "anomaly_score": 0.12053544819355011,
+      "score_std": 0.042563073337078094,
+      "individual_scores": [
+        0.10591567307710648,
+        0.08875404298305511,
+        0.19465216994285583,
+        0.09815415740013123,
+        0.11520114541053772
+      ]
+    },
+    {
+      "rank": 31,
+      "name": "SN2009N",
+      "type": "II",
+      "anomaly_score": 0.0894293338060379,
+      "score_std": 0.013864497654139996,
+      "individual_scores": [
+        0.09951529651880264,
+        0.08602198958396912,
+        0.10437968373298645,
+        0.0885683074593544,
+        0.06866142153739929
+      ]
+    },
+    {
+      "rank": 32,
+      "name": "SN2013ab",
+      "type": "II",
+      "anomaly_score": 0.07528236508369446,
+      "score_std": 0.016684003174304962,
+      "individual_scores": [
+        0.08313809335231781,
+        0.07525722682476044,
+        0.09778764843940735,
+        0.0535917729139328,
+        0.0666370689868927
+      ]
+    },
+    {
+      "rank": 33,
+      "name": "SN2005cs",
+      "type": "II",
+      "anomaly_score": 0.06274311989545822,
+      "score_std": 0.009837904945015907,
+      "individual_scores": [
+        0.06768689304590225,
+        0.046706050634384155,
+        0.06361494213342667,
+        0.06272992491722107,
+        0.07297780364751816
+      ]
+    }
+  ],
+  "validation": {
+    "tests": [
+      {
+        "name": "SN2009ip Ranking",
+        "description": "SN2009ip should rank in top 10",
+        "result": "Rank 4 out of 33 (score: 0.303431)",
+        "status": "PASSED"
+      },
+      {
+        "name": "Type IIn vs Type II",
+        "description": "Type IIn should have higher median anomaly score than Type II",
+        "result": "IIn median: 0.263246, II median: 0.141489",
+        "status": "PASSED",
+        "note": "IIn is 1.9x higher than II. Model correctly identifies IIn as more unusual."
+      },
+      {
+        "name": "Score Spread",
+        "description": "Anomaly scores should show meaningful variation",
+        "result": "Mean: 0.208519, Std: 0.076067, CV: 0.365",
+        "status": "PASSED",
+        "note": "Good score spread - model is discriminating between objects."
+      },
+      {
+        "name": "Ensemble Consistency",
+        "description": "Models in ensemble should roughly agree on scores",
+        "result": "Average relative score std: 0.209",
+        "status": "PASSED",
+        "note": "Good consistency across ensemble models."
+      },
+      {
+        "name": "Top-10 Enrichment",
+        "description": "Top 10 should be enriched in Type IIn relative to the full sample",
+        "result": "Top 10 has 5 IIn out of 10 (vs 10 IIn out of 33 total)",
+        "status": "PASSED",
+        "note": "IIn enrichment factor: 1.6x. Type IIn are overrepresented in the top anomalies."
+      }
+    ],
+    "passed": 5,
+    "failed": 0,
+    "warnings": 0
+  },
+  "top_features": [
+    {
+      "name": "cadence_std",
+      "importance": 0.1744297742843628
+    },
+    {
+      "name": "cadence_mean",
+      "importance": 0.16490831971168518
+    },
+    {
+      "name": "rate_median",
+      "importance": 0.15258386731147766
+    },
+    {
+      "name": "max_gap",
+      "importance": 0.14018774032592773
+    },
+    {
+      "name": "cadence_median",
+      "importance": 0.12863120436668396
+    },
+    {
+      "name": "time_span",
+      "importance": 0.11301827430725098
+    },
+    {
+      "name": "rate_max",
+      "importance": 0.08784258365631104
+    },
+    {
+      "name": "error_mean",
+      "importance": 0.0848287045955658
+    },
+    {
+      "name": "error_std",
+      "importance": 0.06878939270973206
+    },
+    {
+      "name": "mag_range_per_epoch",
+      "importance": 0.06429505348205566
+    },
+    {
+      "name": "mag_min",
+      "importance": 0.06109476089477539
+    },
+    {
+      "name": "outburst_rate",
+      "importance": 0.057031989097595215
+    },
+    {
+      "name": "n_outbursts",
+      "importance": 0.0508539080619812
+    },
+    {
+      "name": "mag_p10",
+      "importance": 0.04176187515258789
+    },
+    {
+      "name": "n_observations",
+      "importance": 0.03695875406265259
+    },
+    {
+      "name": "mag_mean",
+      "importance": 0.03315471112728119
+    },
+    {
+      "name": "sf_short",
+      "importance": 0.03204016387462616
+    },
+    {
+      "name": "mag_skewness",
+      "importance": 0.029541701078414917
+    },
+    {
+      "name": "mag_cv",
+      "importance": 0.029531270265579224
+    },
+    {
+      "name": "trend_slope",
+      "importance": 0.027843192219734192
+    }
+  ]
+}
