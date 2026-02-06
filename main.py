@@ -58,6 +58,12 @@ def parse_args():
                        help="Directory for plot output (default: plots)")
     parser.add_argument("--output-dir", type=str, default="outputs",
                        help="Directory for results output (default: outputs)")
+    parser.add_argument("--gaia", action="store_true",
+                       help="Enable Gaia data integration (adds Gaia-specific features)")
+    parser.add_argument("--gaia-fetch", action="store_true",
+                       help="Fetch additional light curves from Gaia Alerts API (needs network)")
+    parser.add_argument("--gaia-transients", action="store_true",
+                       help="Add Gaia-discovered transients to expand the dataset")
     return parser.parse_args()
 
 
@@ -150,6 +156,25 @@ def main():
         vals = feature_matrix[:, i]
         print(f"  {fn:30s}: min={vals.min():.4f}, max={vals.max():.4f}, "
               f"mean={vals.mean():.4f}")
+
+    # ==================================================================
+    # STEP 2b: GAIA DATA INTEGRATION (optional)
+    # Add Gaia-specific features and optionally expand dataset
+    # ==================================================================
+    if args.gaia or args.gaia_fetch or args.gaia_transients:
+        print("\n" + "=" * 70)
+        print("STEP 2b: GAIA DATA INTEGRATION")
+        print("=" * 70)
+
+        from gaia_integration import integrate_gaia_data
+        feature_matrix, feature_names, supernovae_data, names, types = \
+            integrate_gaia_data(
+                supernovae_data, feature_matrix, feature_names, names,
+                fetch_alerts=args.gaia_fetch,
+                add_transients=args.gaia_transients,
+            )
+        print(f"After Gaia integration: {feature_matrix.shape[1]} features, "
+              f"{feature_matrix.shape[0]} supernovae")
 
     # ==================================================================
     # STEP 3: MODEL TRAINING
